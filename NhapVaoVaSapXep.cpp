@@ -14,7 +14,7 @@ void EnterAndSort() {
     printf("\n");
 
     //Sắp xếp từ lớn tới nhỏ
-    for (int i = 12; i > 0; i--) {
+    for (int i = 11; i > 0; i--) {
         for (int j = 0; j < i; j++) {
             if (Day[j] < Day[j + 1]) {
                 BienTam = Day[j];
