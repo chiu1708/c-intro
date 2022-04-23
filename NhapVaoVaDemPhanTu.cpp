@@ -1,35 +1,28 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 
 void EnterAndCount() {
 	//Nhap vao mot day so
-	int Day[12],DayPhu[12], DoDai = 0, count = 1, ChuaDem = 1;
+	int a[12], keys[12], values[12], m = 0, j;
 	for (int i = 0; i < 12; i++) {
-		printf("value[%d] = ", i); scanf_s("%d", &Day[i]);
-		
+		printf("value[%d] = ", i); scanf("%d", &a[i]);
 	}
 
 	//Dem so phan tu trung
 	for (int i = 0; i < 12; i++) {
-		ChuaDem = 1;
-		//Kiem tra da dem phan tu chua
-		for (int j = 0; j < DoDai; j++) {
-			if (Day[i] == DayPhu[j]) {
-				ChuaDem = 0;
-				break;
-			}
-		}
-		//Neu chua dem
-		if (ChuaDem) {
-			for (int j = i + 1; j < 12; j++) {
-				if (Day[j] == Day[i]) {
-					count++;
-				}
-			}
-			printf("so %d xuat hien %d lan.\n", Day[i], count);
-			DayPhu[DoDai] = Day[i];
-			DoDai++;
-			count = 1;
-		}
+	    for (j = 0; j < m; j++) {
+	        if (a[i] == keys[j]) { break; }
+	    }
+	    if (j == m) {
+	        keys[m] = a[i];
+	        values[m++] = 1;
+	    } else {
+	        values[j]++;
+	    }
+	}
+	
+	//In ra cac phan tu
+	for (int i = 0; i < m; i++) {
+	    printf("So %d xuat hien %d lan.\n", keys[i], values[i]);
 	}
 
 	return;
