@@ -1,3 +1,6 @@
+//Da sua bai
+//
+
 #include <stdio.h>
 
 void EnterAndCount() {
