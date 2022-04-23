@@ -4,7 +4,7 @@ void EnterAndSort() {
     //Nhap vao mot day so
     int Day[12], BienTam;
     for (int i = 0; i < 12; i++) {
-        printf("value[%d] =", i); scanf_s("%d", &Day[i]);
+        printf("value[%d] = ", i); scanf_s("%d", &Day[i]);
     }
 
     //Xuat ra man hinh day so
