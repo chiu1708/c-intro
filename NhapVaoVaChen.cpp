@@ -4,7 +4,7 @@ void EnterAndInsert() {
     //Nhap vao mot day so
     int Day[12],DayPhu[24], BienTam, SoCanChen, CanGan, ViTri, DoDai = 12;
     for (int i = 0; i < 12; i++) {
-        printf("value[%d] =", i); scanf_s("%d", &Day[i]);
+        printf("value[%d] = ", i); scanf_s("%d", &Day[i]);
         DayPhu[i] = Day[i];
     }
 
