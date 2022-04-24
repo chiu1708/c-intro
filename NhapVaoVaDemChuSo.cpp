@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 int Dem(x) {
+    //tan dung x/10 = 0 = false
     return x / 10 ? 1 + Dem(x / 10) : 1;
 }
 
