@@ -1,7 +1,9 @@
-﻿#include <stdio.h>
+//Da sua bai
+//
+#include <stdio.h>
 
 int Dem(x) {
-    return x / 10 == 0 ? 1 : 1 + Dem(x / 10);
+    return x / 10 ? 1 + Dem(x / 10) : 1;
 }
 
 void EnterAndCount() {
