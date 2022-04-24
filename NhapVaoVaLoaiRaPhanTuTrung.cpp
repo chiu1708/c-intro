@@ -26,7 +26,7 @@ void EnterAndSort() {
     }
 
     //Xuat day da loai cac phan tu trung ra man hinh
-    printf("Day so da sap xep tang dan: ");
+    printf("Day so da loai ra cac phan tu trung: ");
     for (int i = 0; i < 12; i++) {
         if (Day[i] != Day[i - 1]) {
             printf("%d ", Day[i]);
