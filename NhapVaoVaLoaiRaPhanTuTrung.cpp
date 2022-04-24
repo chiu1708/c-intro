@@ -14,7 +14,7 @@ void EnterAndSort() {
     }
     printf("\n");
 
-    //Sắp xếp từ lớn tới nhỏ
+    //Sắp xếp từ nhỏ tới lớn
     for (int i = 12; i > 0; i--) {
         for (int j = 0; j < i; j++) {
             if (Day[j] > Day[j + 1]) {
