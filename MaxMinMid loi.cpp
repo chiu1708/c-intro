@@ -10,7 +10,7 @@ int* NhapMaTran(int n, int m) {
 	return arr;
 }
 
-int* MInMaxMiddle(int arr[][100], int n, int m) {
+int* MinMaxMiddle(int arr[][100], int n, int m) {
 	int max, min;
 	static int mmm[3][100];
 	for (int i = 0; i < n; i++) {
@@ -42,20 +42,10 @@ void XuatKetQua(int mmm[][100], int n) {
 		min = mmm[1][i];
 		mid = (max + min) / 2;
 		if (mmm[2][i]) {
-			printf("Dong %d co (min, max, middle) la (%d, %d, %d)\n", i + 1, max, min, mid);
+			printf("Dong %d co (min, max, middle) la (%d, %d, %d)\n", i + 1, min, max, mid);
 		}
 		else {
-			printf("Dong %d co (min, max, middle) la (%d, %d, n/a)\n", i + 1, max, min);
+			printf("Dong %d co (min, max, middle) la (%d, %d, n/a)\n", i + 1, min, max);
 		}
 	}
-}
-
-
-void main() {
-	int n, m;
-	printf("Nhap so dong : "); scanf_s("%d", &n);
-	printf("Nhap so cot : "); scanf_s("%d", &m);
-	int* arr = NhapMaTran(n, m);
-	int* mmm = MinMaxMiddle(arr, n, m);
-	XuatKetQua(mmm, n);
 }
