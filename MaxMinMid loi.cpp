@@ -49,3 +49,13 @@ void XuatKetQua(int mmm[][100], int n) {
 		}
 	}
 }
+
+
+void main() {
+	int n, m;
+	printf("Nhap so dong : "); scanf_s("%d", &n);
+	printf("Nhap so cot : "); scanf_s("%d", &m);
+	int* arr = NhapMaTran(n, m);
+	int* mmm = MinMaxMiddle(arr, n, m);
+	XuatKetQua(mmm, n);
+}
