@@ -8,7 +8,7 @@ int* NhapVaoDay(int n) {
 	return arr;
 }
 
-int* SapXepTangDan(int arr[], int n) {
+void SapXepTangDan(int arr[], int n) {
 	int BienTam;
 	for (int i = 0; i < n; i++) {
 		for (int j = 1; j < n - i; j++) {
@@ -19,7 +19,6 @@ int* SapXepTangDan(int arr[], int n) {
 			}
 		}
 	}
-	return arr;
 }
 
 int* TimSoConThieu(int arr[], int n) {
@@ -46,7 +45,7 @@ void main() {
 	int n;
 	printf("Nhap vao do dai: "); scanf_s("%d", &n); 
 	int* arr = NhapVaoDay(n);
-	arr = SapXepTangDan(arr, n);
+	SapXepTangDan(arr, n);
 	printf("Day so da sap xep: "); XuatMang(arr, n); printf("\n");
 	arr = TimSoConThieu(arr, n);
 	printf("Cac so con thieu la: "); XuatMang(arr, arr[1000]);
