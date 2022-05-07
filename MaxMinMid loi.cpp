@@ -14,12 +14,14 @@ int* MInMaxMiddle(int arr[][100], int n, int m) {
 	int max, min;
 	static int mmm[3][100];
 	for (int i = 0; i < n; i++) {
+		//Tim max, min
 		max = 0;
 		min = arr[i][0];
 		for (int j = 0; j < m; j++) {
 			max = arr[i][j] > max ? arr[i][j] : max;
 			min = arr[i][j] < min ? arr[i][j] : min;
 		}
+		//kiem tra middle
 		mmm[0][i] = max;
 		mmm[1][i] = min;
 		mmm[2][i] = 0;
