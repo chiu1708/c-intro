@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 
 int strlen(char str[]) {
 	int i = 0;
@@ -31,9 +31,8 @@ int compare(char str1[], char str2[]) {
 }
 
 void main() {
-	char str[1000], str1[1000];
-	printf("Nhap vao mot chuoi: "); fgets(str, sizeof(str), stdin);
-	str[strlen(str) - 1] = '\0';
+	char str[1000] = "", str1[1000] = "";
+	printf("Nhap vao mot chuoi: "); gets(str);
 	strcpy(str, str1);
 	DaoChuoi(str);
 	printf("%s%sla chuoi palindrome", str1, compare(str, str1) ? " " : " khong ");
