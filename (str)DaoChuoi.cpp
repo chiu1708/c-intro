@@ -7,9 +7,12 @@ int strlen(char str[]) {
 }
 
 void DaoChuoi(char str[]) {
-	char BienTam = str[strlen(str) - 1], CanGan;
+	char str1[1000];
 	for (int i = 0; i < strlen(str); i++) {
-		CanGan = BienTam; BienTam = str[i]; str[i] = CanGan;
+		str1[i] = str[strlen(str) - (i + 1)];
+	}
+	for (int i = 0; i < strlen(str); i++) {
+		str[i] = str1[i];
 	}
 }
 
